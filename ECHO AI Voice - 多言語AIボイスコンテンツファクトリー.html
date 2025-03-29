@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/ -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHO AI Voice - 多言語AIボイスコンテンツファクトリー</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366F1;
+            --primary-dark: #4F46E5;
+            --primary-light: #A5B4FC;
+            --dark-color: #111827;
+            --light-color: #F9FAFB;
+            --gray-color: #6B7280;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ヘッダー */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            margin-left: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* ヒーローセクション */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text {
+            width: 50%;
+        }
+        
+        .hero-image {
+            width: 45%;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* 特徴セクション */
+        .features {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--gray-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon i {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .feature-card p {
+            color: var(--gray-color);
+        }
+        
+        /* サービスセクション */
+        .services {
+            padding: 100px 0;
+            background-color: #F3F4F6;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .service-image {
+            height: 200px;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-image i {
+            font-size: 48px;
+            color: var(--primary-color);
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .service-content p {
+            color: var(--gray-color);
+            margin-bottom: 20px;
+        }
+        
+        /* 事例セクション */
+        .case-studies {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .case-study-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .case-study-image {
+            height: 250px;
+            background-color: var(--primary-light);
+            position: relative;
+        }
+        
+        .case-study-content {
+            padding: 30px;
+        }
+        
+        .case-study-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .case-study-content p {
+            color: var(--gray-color);
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+        
+        /* 料金プランセクション */
+        .pricing {
+            padding: 100px 0;
+            background-color: #F3F4F6;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            position: relative;
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.popular::before {
+            content: "人気";
+            position: absolute;
+            top: -12px;
+            right: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .pricing-price span {
+            font-size: 1rem;
+            color: var(--gray-color);
+            font-weight: 400;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #E5E7EB;
+            color: var(--gray-color);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        /* お問い合わせセクション */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+        
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .contact-text {
+            width: 50%;
+        }
+        
+        .contact-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-text p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .contact-form {
+            width: 45%;
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #E5E7EB;
+            border-radius: var(--border-radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        /* フッター */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+            color: white;
+        }
+        
+        .footer-about p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* レスポンシブデザイン */
+        @media (max-width: 992px) {
+            .hero-content,
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .hero-text,
+            .hero-image,
+            .contact-text,
+            .contact-form {
+                width: 100%;
+            }
+            
+            .hero-text {
+                margin-bottom: 40px;
+            }
+            
+            .contact-text {
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            
+            .features-grid,
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+            
+            .pricing-card.popular:hover {
+                transform: translateY(-5px);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .features-grid,
+            .services-grid,
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* 言語切り替えボタン */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .language-switcher select {
+            padding: 5px 10px;
+            border-radius: var(--border-radius);
+            border: 1px solid #E5E7EB;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            background-color: white;
+        }
+
+        /* 音声波形アニメーション */
+        .voice-wave {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            margin: 20px 0;
+        }
+
+        .voice-wave span {
+            display: inline-block;
+            width: 5px;
+            height: 20px;
+            margin: 0 2px;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+            animation: wave 1.5s infinite ease-in-out;
+        }
+
+        .voice-wave span:nth-child(2) {
+            animation-delay: 0.1s;
+            height: 30px;
+        }
+
+        .voice-wave span:nth-child(3) {
+            animation-delay: 0.2s;
+            height: 40px;
+        }
+
+        .voice-wave span:nth-child(4) {
+            animation-delay: 0.3s;
+            height: 50px;
+        }
+
+        .voice-wave span:nth-child(5) {
+            animation-delay: 0.4s;
+            height: 40px;
+        }
+
+        .voice-wave span:nth-child(6) {
+            animation-delay: 0.5s;
+            height: 30px;
+        }
+
+        .voice-wave span:nth-child(7) {
+            animation-delay: 0.6s;
+            height: 20px;
+        }
+
+        @keyframes wave {
+            0%, 100% {
+                transform: scaleY(1);
+            }
+            50% {
+                transform: scaleY(0.5);
+            }
+        }
+
+        /* 言語フラグ */
+        .language-flags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .language-flag {
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+            color: var(--dark-color);
+        }
+
+        .language-flag img {
+            width: 20px;
+            margin-right: 8px;
+        }
+
+        /* 音声サンプルプレイヤー */
+        .audio-player {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .audio-player-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .audio-player-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .audio-player-header h4 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .audio-player-header p {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            margin: 0;
+        }
+
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .play-button {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background-color: #E5E7EB;
+            border-radius: 3px;
+            position: relative;
+        }
+
+        .progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+            width: 30%;
+        }
+
+        .time {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+
+        /* グループ企業リンク */
+        .group-companies {
+            padding: 60px 0;
+            background-color: #F9FAFB;
+            text-align: center;
+        }
+
+        .group-companies h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+
+        .company-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .company-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .company-logo:hover {
+            transform: translateY(-5px);
+        }
+
+        .company-logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .company-logo span {
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container header-container">
+            <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#6366F1"></rect>
+                    <path d="M20 10C14.477 10 10 14.477 10 20C10 25.523 14.477 30 20 30C25.523 30 30 25.523 30 20C30 14.477 25.523 10 20 10ZM20 28C15.582 28 12 24.418 12 20C12 15.582 15.582 12 20 12C24.418 12 28 15.582 28 20C28 24.418 24.418 28 20 28Z" fill="white"></path>
+                    <path d="M20 15C17.239 15 15 17.239 15 20C15 22.761 17.239 25 20 25C22.761 25 25 22.761 25 20C25 17.239 22.761 15 20 15ZM20 23C18.343 23 17 21.657 17 20C17 18.343 18.343 17 20 17C21.657 17 23 18.343 23 20C23 21.657 21.657 23 20 23Z" fill="white"></path>
+                    <circle cx="20" cy="20" r="2" fill="white"></circle>
+                </svg>
+                <span>ECHO AI Voice</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#features">特徴</a></li>
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#services">サービス</a></li>
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#case-studies">事例</a></li>
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#pricing">料金</a></li>
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact">お問い合わせ</a></li>
+                <li>
+                    <div class="language-switcher">
+                        <select>
+                            <option value="ja">日本語</option>
+                            <option value="en">English</option>
+                            <option value="zh">中文</option>
+                            <option value="ko">한국어</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact" class="btn">無料デモを試す</a>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>あらゆる言語の壁を超える<br>AIボイスコンテンツファクトリー</h1>
+                <p>生成AIによる脚本作成から音声合成までを一気通貫で行い、40以上の言語で高品質な音声コンテンツを効率的に制作します。従来の3分の1の時間とコストで、グローバルな音声コンテンツ展開を実現します。</p>
+                <div class="hero-buttons">
+                    <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact" class="btn">無料デモを試す</a>
+                    <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#case-studies" class="btn btn-outline">事例を見る</a>
+                </div>
+                <div class="language-flags">
+                    <div class="language-flag">
+                        <img src="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/jp.png" alt="日本語">
+                        <span>日本語</span>
+                    </div>
+                    <div class="language-flag">
+                        <img src="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/us.png" alt="英語">
+                        <span>English</span>
+                    </div>
+                    <div class="language-flag">
+                        <img src="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/cn.png" alt="中国語">
+                        <span>中文</span>
+                    </div>
+                    <div class="language-flag">
+                        <img src="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/kr.png" alt="韓国語">
+                        <span>한국어</span>
+                    </div>
+                    <div class="language-flag">
+                        <img src="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/fr.png" alt="フランス語">
+                        <span>Français</span>
+                    </div>
+                    <div class="language-flag">
+                        <img src="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/de.png" alt="ドイツ語">
+                        <span>Deutsch</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="voice-wave">
+                    <span style="animation-delay: 0s;"></span>
+                    <span style="animation-delay: 0.1s;"></span>
+                    <span style="animation-delay: 0.2s;"></span>
+                    <span style="animation-delay: 0.3s;"></span>
+                    <span style="animation-delay: 0.4s;"></span>
+                    <span style="animation-delay: 0.5s;"></span>
+                    <span style="animation-delay: 0.6s;"></span>
+                </div>
+                <div class="audio-player">
+                    <div class="audio-player-header">
+                        <img src="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/44.jpg" alt="音声サンプル">
+                        <div>
+                            <h4>ビジネスポッドキャスト</h4>
+                            <p>日本語 / 女性ナレーター</p>
+                        </div>
+                    </div>
+                    <div class="audio-controls">
+                        <div class="play-button">▶</div>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="time">1:24 / 4:30</div>
+                    </div>
+                </div>
+                <div class="audio-player">
+                    <div class="audio-player-header">
+                        <img src="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/32.jpg" alt="音声サンプル">
+                        <div>
+                            <h4>教育コンテンツ</h4>
+                            <p>英語 / 男性ナレーター</p>
+                        </div>
+                    </div>
+                    <div class="audio-controls">
+                        <div class="play-button">▶</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%;"></div>
+                        </div>
+                        <div class="time">2:15 / 5:00</div>
+                    </div>
+                </div>
+                <div class="audio-player">
+                    <div class="audio-player-header">
+                        <img src="./ECHO AI Voice - 多言語AIボイスコンテンツファクトリー_files/68.jpg" alt="音声サンプル">
+                        <div>
+                            <h4>企業ブランドボイス</h4>
+                            <p>中国語 / 女性ナレーター</p>
+                        </div>
+                    </div>
+                    <div class="audio-controls">
+                        <div class="play-button">▶</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 15%;"></div>
+                        </div>
+                        <div class="time">0:45 / 3:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特徴セクション -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>多言語音声コンテンツ制作の未来</h2>
+                <p>ECHO AI Voiceは、生成AI技術を活用した多言語対応の音声コンテンツ制作サービスです。企画から配信までをワンストップで提供し、グローバルな音声コンテンツ展開を実現します。</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.258 9.77251 19.9887C9.5799 19.7194 9.31074 19.5143 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48572 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h3>40以上の言語に対応</h3>
+                    <p>日本語、英語、中国語、韓国語をはじめとする40以上の言語で、自然な音声合成を実現します。各言語のネイティブ監修により、文化的ニュアンスも正確に再現します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L15 15" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3.05078 11.0002C3.27441 8.18743 4.76523 5.61444 7.12132 3.94747C9.4774 2.2805 12.4773 1.73879 15.2872 2.48668C18.097 3.23456 20.4438 5.19283 21.6853 7.81588C22.9268 10.4389 22.9237 13.4808 21.6768 16.1012C20.4299 18.7217 18.0797 20.6748 15.2686 21.4166C12.4576 22.1584 9.45845 21.6105 7.10553 19.9385C4.75261 18.2665 3.26679 15.6897 3.04889 12.8761C3.01648 12.2518 3.01648 11.6252 3.05078 11.0002Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h3>時間とコストを3分の1に削減</h3>
+                    <p>従来の音声コンテンツ制作と比較して、制作時間とコストを3分の1に削減します。企画から配信までをワンストップで提供することで、効率的な制作を実現します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M16 17L21 12L16 7" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M21 12H9" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h3>企画から配信までワンストップ</h3>
+                    <p>コンテンツ企画、脚本作成、音声合成、編集、配信までを一貫して提供します。複数の業者に依頼する手間を省き、一貫した品質管理を実現します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 3V5" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 19V21" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M5 12H3" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M21 12H19" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M16.95 7.05005L15.536 8.46405" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M8.46399 15.536L7.04999 16.95" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M16.95 16.95L15.536 15.536" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M8.46399 8.46405L7.04999 7.05005" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h3>感情表現・抑揚の自然な再現</h3>
+                    <p>最新の音声合成技術により、感情表現や抑揚を自然に再現します。聴き手を引き込む魅力的な音声コンテンツを制作します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M15 2H9C8.44772 2 8 2.44772 8 3V5C8 5.55228 8.44772 6 9 6H15C15.5523 6 16 5.55228 16 5V3C16 2.44772 15.5523 2 15 2Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 11H16" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 16H16" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M8 11H8.01" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M8 16H8.01" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h3>各言語・文化に適したローカライズ</h3>
+                    <p>単なる翻訳ではなく、各言語・文化に適したローカライズを行います。現地の文化的背景や表現方法を考慮した、自然なコンテンツを制作します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h3>ボイスクローニング技術</h3>
+                    <p>個人や企業の声をAIでクローニングし、多言語展開することが可能です。一貫したブランドボイスを世界中で展開できます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービスセクション -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>提供サービス</h2>
+                <p>ECHO AI Voiceは、多様なニーズに応える3つの主要サービスを提供しています。企業・個人向けポッドキャスト制作から教育コンテンツ、企業ブランドボイスまで、幅広いソリューションをご用意しています。</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1C11.2044 1 10.4413 1.31607 9.87868 1.87868C9.31607 2.44129 9 3.20435 9 4V12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12V4C15 3.20435 14.6839 2.44129 14.1213 1.87868C13.5587 1.31607 12.7956 1 12 1Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M19 10V12C19 13.8565 18.2625 15.637 16.9497 16.9497C15.637 18.2625 13.8565 19 12 19C10.1435 19 8.36301 18.2625 7.05025 16.9497C5.7375 15.637 5 13.8565 5 12V10" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 19V23" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M8 23H16" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>ECHO PODCAST AI</h3>
+                        <p>企業・個人向けポッドキャスト制作サービス。企画・脚本作成から多言語音声合成、編集・配信支援までをワンストップで提供します。定期的なコンテンツ制作にも対応し、グローバルなリスナー獲得を支援します。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact" class="btn">詳細を見る</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7V21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H2V3Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>ECHO LEARNING AI</h3>
+                        <p>教育・研修向け多言語音声コンテンツ制作サービス。教育コンテンツの多言語化、インタラクティブ学習音声、評価・フィードバックシステムを提供します。グローバルな教育展開を効率的に実現します。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact" class="btn">詳細を見る</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5Z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 7L12 13L21 7" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>ECHO VOICE IDENTITY</h3>
+                        <p>企業ブランドボイス構築・多言語展開サービス。ブランドボイス設計、多言語展開、一貫性維持管理を提供します。企業の声を世界中で一貫して展開し、ブランド認知を高めます。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact" class="btn">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 事例セクション -->
+    <section class="case-studies" id="case-studies">
+        <div class="container">
+            <div class="section-title">
+                <h2>導入事例</h2>
+                <p>ECHO AI Voiceを活用した企業・団体の成功事例をご紹介します。多様な業界での活用方法と成果をご覧ください。</p>
+            </div>
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <div class="case-study-image" style="background-image: url(&#39;https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80&#39;); background-size: cover; background-position: center;"></div>
+                    <div class="case-study-content">
+                        <div class="tag">ポッドキャスト</div>
+                        <div class="tag">多言語展開</div>
+                        <h3>グローバル展開を実現した製造業メーカー</h3>
+                        <p>日本の製造業メーカーが、自社の技術や製品を紹介するポッドキャストを8言語で展開。従来の3分の1のコストと時間で、グローバルなブランド認知度を向上させました。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#" class="btn btn-outline">詳細を見る</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-study-image" style="background-image: url(&#39;https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80&#39;); background-size: cover; background-position: center;"></div>
+                    <div class="case-study-content">
+                        <div class="tag">教育</div>
+                        <div class="tag">オンライン学習</div>
+                        <h3>グローバル展開するオンライン教育プラットフォーム</h3>
+                        <p>オンライン教育プラットフォームが、教育コンテンツを12言語で展開。学習者の満足度が向上し、グローバルな受講者数が3倍に増加しました。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#" class="btn btn-outline">詳細を見る</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-study-image" style="background-image: url(&#39;https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1374&amp;q=80&#39;); background-size: cover; background-position: center;"></div>
+                    <div class="case-study-content">
+                        <div class="tag">ブランドボイス</div>
+                        <div class="tag">マーケティング</div>
+                        <h3>統一ブランドボイスを構築した金融機関</h3>
+                        <p>大手金融機関が、一貫したブランドボイスを6言語で展開。顧客満足度が向上し、ブランド認知度が40%向上しました。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#" class="btn btn-outline">詳細を見る</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-study-image" style="background-image: url(&#39;https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80&#39;); background-size: cover; background-position: center;"></div>
+                    <div class="case-study-content">
+                        <div class="tag">インバウンド</div>
+                        <div class="tag">観光</div>
+                        <h3>多言語音声ガイドを導入した観光地</h3>
+                        <p>日本の観光地が、観光案内の音声ガイドを10言語で展開。インバウンド観光客の満足度が向上し、滞在時間と消費額が増加しました。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#" class="btn btn-outline">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金プランセクション -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>料金プラン</h2>
+                <p>ECHO AI Voiceは、多様なニーズに応える柔軟な料金プランをご用意しています。初めての方から大規模な多言語展開まで、最適なプランをお選びいただけます。</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>スタータープラン</h3>
+                    <div class="pricing-price">¥98,000<span>/月〜</span></div>
+                    <ul class="pricing-features">
+                        <li>月間コンテンツ制作：最大5時間</li>
+                        <li>対応言語：3言語まで</li>
+                        <li>企画・脚本サポート</li>
+                        <li>基本的な編集・配信支援</li>
+                        <li>平日サポート</li>
+                    </ul>
+                    <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact" class="btn">お問い合わせ</a>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>ビジネスプラン</h3>
+                    <div class="pricing-price">¥298,000<span>/月〜</span></div>
+                    <ul class="pricing-features">
+                        <li>月間コンテンツ制作：最大15時間</li>
+                        <li>対応言語：10言語まで</li>
+                        <li>高度な企画・脚本作成</li>
+                        <li>プロフェッショナル編集・配信支援</li>
+                        <li>専任サポート担当者</li>
+                        <li>効果測定・分析レポート</li>
+                    </ul>
+                    <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact" class="btn">お問い合わせ</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>エンタープライズプラン</h3>
+                    <div class="pricing-price">¥598,000<span>/月〜</span></div>
+                    <ul class="pricing-features">
+                        <li>月間コンテンツ制作：無制限</li>
+                        <li>対応言語：40言語以上</li>
+                        <li>カスタムボイスクローニング</li>
+                        <li>プレミアム編集・配信支援</li>
+                        <li>専任チーム</li>
+                        <li>詳細な効果測定・分析</li>
+                        <li>戦略的コンサルティング</li>
+                    </ul>
+                    <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact" class="btn">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- グループ企業セクション -->
+    <section class="group-companies">
+        <div class="container">
+            <h3>グループ企業</h3>
+            <div class="company-logos">
+                <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/index.html" class="company-logo">
+                    <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#111827"></rect>
+                        <path d="M10 20L15 25L30 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span>NEXUS AI Studio</span>
+                </a>
+                <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/regional-ai-partners/index.html" class="company-logo">
+                    <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#047857"></rect>
+                        <path d="M20 10C14.477 10 10 14.477 10 20C10 25.523 14.477 30 20 30C25.523 30 30 25.523 30 20C30 14.477 25.523 10 20 10ZM20 28C15.582 28 12 24.418 12 20C12 15.582 15.582 12 20 12C24.418 12 28 15.582 28 20C28 24.418 24.418 28 20 28Z" fill="white"></path>
+                        <path d="M20 15C17.239 15 15 17.239 15 20C15 22.761 17.239 25 20 25C22.761 25 25 22.761 25 20C25 17.239 22.761 15 20 15ZM20 23C18.343 23 17 21.657 17 20C17 18.343 18.343 17 20 17C21.657 17 23 18.343 23 20C23 21.657 21.657 23 20 23Z" fill="white"></path>
+                        <circle cx="20" cy="20" r="2" fill="white"></circle>
+                    </svg>
+                    <span>REGIONAL AI PARTNERS</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section class="contact" id="contact">
+        <div class="container contact-content">
+            <div class="contact-text">
+                <h2>あなたのコンテンツを世界へ</h2>
+                <p>ECHO AI Voiceは、あなたの音声コンテンツを世界中の人々に届けるお手伝いをします。まずは無料デモをお試しください。専門スタッフがニーズに合わせた最適なソリューションをご提案します。</p>
+                <div class="voice-wave">
+                    <span style="animation-delay: 0.7s;"></span>
+                    <span style="animation-delay: 0.8s;"></span>
+                    <span style="animation-delay: 0.9s;"></span>
+                    <span style="animation-delay: 1s;"></span>
+                    <span style="animation-delay: 1.1s;"></span>
+                    <span style="animation-delay: 1.2s;"></span>
+                    <span style="animation-delay: 1.3s;"></span>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" placeholder="山田 太郎">
+                </div>
+                <div class="form-group">
+                    <label for="company">会社名</label>
+                    <input type="text" id="company" placeholder="株式会社サンプル">
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" placeholder="example@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" placeholder="ご質問やご要望をお書きください"></textarea>
+                </div>
+                <button class="btn">無料デモを申し込む</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#" class="footer-logo">ECHO AI Voice</a>
+                    <p>ECHO AI Voiceは、生成AIによる脚本作成から音声合成までを一気通貫で行う、多言語対応の音声コンテンツ制作サービスです。40以上の言語で高品質な音声コンテンツを効率的に制作します。</p>
+                    <div class="social-links">
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#"><i>X</i></a>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#"><i>FB</i></a>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#"><i>IG</i></a>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#"><i>LI</i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>サービス</h3>
+                    <ul>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#services">ECHO PODCAST AI</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#services">ECHO LEARNING AI</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#services">ECHO VOICE IDENTITY</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#pricing">料金プラン</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>会社情報</h3>
+                    <ul>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#">会社概要</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#">ブログ</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#">採用情報</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#">プレスリリース</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#contact">お問い合わせ</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#">よくある質問</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#">プライバシーポリシー</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/#">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 ECHO AI Voice. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 音声波形アニメーション
+        const waveSpans = document.querySelectorAll('.voice-wave span');
+        waveSpans.forEach((span, index) => {
+            span.style.animationDelay = `${index * 0.1}s`;
+        });
+        
+        // 再生ボタン
+        const playButtons = document.querySelectorAll('.play-button');
+        playButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent === '▶') {
+                    this.textContent = '⏸';
+                } else {
+                    this.textContent = '▶';
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
